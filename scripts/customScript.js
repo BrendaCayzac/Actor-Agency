@@ -34,32 +34,18 @@ $('.btn').on('click', function (e) {
     $('#inputSelectCategory').val(selectCategory);
 });
 
-/*
-Very smart js filter based in arrays
-const inputs = document.querySelectorAll(".btn");
-for (const input of inputs) {
-  input.addEventListener("click", function () {
-        const selectCat = this.querySelector("input").value;
-    console.log(selectCat);
-        // Hide ALL the card
-        // Show the one that have the corresponding class name "selectCat".
-        // Change the <select> of the category to the right value.
-  })
-}
-*/
-
 //Selector Actor (using separate for loop for clarity)
-const optionMock = $('#actorName')
+const optionMock = $('#actorName');
 for (const actorPerson of actors) {
     //cloning using jquery
     const newOption = optionMock.clone();
     //appending using jquery
     newOption.appendTo($('#inputSelectActor'));
     //adding information jquery
-    newOption.text(actorPerson.name).css('textTransform', 'capitalize');
-    //! .split(' ').join('-') is making 'john doe' -> 'john-doe'
+    newOption.text(actorPerson.name);
+    //! .split(' ').join('-') is making 'johndoe' -> 'john doe'
     // ! to link values and id
-    newOption.val(actorPerson.name.split(' ').join('-'))
+    newOption.val(actorPerson.name.split(' ').join(' '))
     //No need to murder mock (`皿´＃)
 };
 // Selection Event
@@ -70,8 +56,8 @@ $('.card').on('click', function (e) {
     $(this).addClass('bg-primary text-white');
     //get the actor's name from the text not value.
     const selectedActorName = $(this).find('h5').text();
-    //console.log(selectedActorName);
-    $('#inputSelectActor').val(selectedActorName).css('textTransform', 'capitalize');
+    console.log(selectedActorName);
+    $('#inputSelectActor').val(selectedActorName);
 });
 
 $('input, select').attr('required', true);
@@ -82,7 +68,8 @@ $('form').on('submit', function (e) {
 
     //to check for email emailValue.split('@')[1]includes.('.');
     const actorName = $('#inputSelectActor').val(); // john-doe
-    $('form').html('Sorry, <span>' + $('#' + actorName).text() + '</span> is not currently available. You will be contacted as soon as possible.')
+    $('form').html('Sorry, <span>' + $('#' + actorName).text() + '</span> is not currently available. You will be contacted as soon as possible.');
+    $(this).find('span').css('text-transform', 'capitalize');
 })
 
 //BONUS 1 - Form to Page
@@ -107,5 +94,4 @@ $('#inputSelectActor').on('change', function (e) {
     $('.card').removeClass('bg-primary text-white');
     //adds it to all the clicked
     $('#' + selectedActorNameInput).addClass('bg-primary text-white');
-
 });

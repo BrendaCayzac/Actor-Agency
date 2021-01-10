@@ -9,7 +9,7 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!--Font awesome cdn-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-    <title>Document</title>
+    <title>Home</title>
 </head>
 
 <body>
@@ -27,11 +27,12 @@
             <ul class="navbar-nav">
                 <!--Home page (active)-->
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <!--Availability Page-->
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Availability</a>
+                    <a class="nav-link" href="pages/availability.html">Availability<span
+                            class="sr-only">(current)</span></a>
                 </li>
                 <!--Actors page-->
                 <li class="nav-item">
@@ -40,86 +41,11 @@
             </ul>
         </div>
     </nav>
+    <main>
 
-    <!--Container holding the content-->
-    <div class="container-fluid text-center">
-        <!--Title-->
-        <!--decided to play around with border, margin, and padding for test-->
-        <h1 class="display-4 mx-4 my-3 pt-4 border-top text-left">Pick a category:</h1>
-
-        <!--Category Buttons-->
-        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-            <!--Apply text-align center to the parent since this is an in-line flex object-->
-            <!--added padding bottom by pb-->
-            <label class="btn btn-primary pb-4">
-                <input type="radio" name="options" id="option1" value="Male" autocomplete="off" checked>
-                <!--Font Awesome icon + enter-->
-                <i class="fa fa-male" aria-hidden="true"></i> <br>
-                Male
-            </label>
-            <label class="btn btn-primary pb-4">
-                <input type="radio" name="options" id="option2" value="Female" autocomplete="off">
-                <i class="fa fa-female" aria-hidden="true"></i><br>
-                Female
-            </label>
-            <label class="btn btn-primary pb-4">
-                <input type="radio" name="options" id="option3" value="Baby" autocomplete="off">
-                <i class="fa fa-baby" aria-hidden="true"></i><br>
-                Baby
-            </label>
-        </div>
-
-        <!--Form-->
-        <!--doesn't have action-->
-        <form class="mt-3 pt-3 border-top text-left mx-4 border-bottom">
-            <!--added margin and padding to add border separation from previous section-->
-            <div class="form-row ">
-                <div class="col">
-                    <!--Text input-->
-                    <!--Added label-->
-                    <label for="inputCompany">Company</label>
-                    <input type="text" class="form-control" placeholder="Company Name" id="inputCompany">
-                </div>
-                <div class="col">
-                    <label for="inputEmail">Email</label>
-                    <input type="email" class="form-control" id="inputEmail" placeholder="email@example.com">
-                </div>
-            </div>
-            <!--Row 2-->
-            <div class="form-row mt-3">
-                <div class="col">
-                    <!--Select input-->
-                    <label for="inputSelectCategory">Category</label>
-                    <select class="form-control" id="inputSelectCategory">
-                        <!--JS filtering will be applied on my file-->
-                        <!--Addded Value for button selection/filtering-->
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                        <option value="Baby">Baby</option>
-                    </select>
-                </div>
-                <div class="col">
-                    <!--Select input 2-->
-                    <!-- Only one option for the clone-->
-                    <label for="inputSelectActor">Actor</label>
-                    <select class="form-control" id="inputSelectActor">
-                        <option id="actorName">Select an actor</option>
-                    </select>
-                </div>
-            </div>
-            <button type="submit" class="btn btn-primary my-3">Ask for availability</button>
-        </form>
-        <div class="card-columns mx-3 mt-3 mb-5">
-            <div class="card d-none">
-                <img class="card-img-top" src="#" alt="Actor Picture">
-                <div class="card-body">
-                    <h5 class="card-title text-left">Name</h5>
-                </div>
-            </div>
-        </div>
-    </div>
+    </main>
     <!--data js-->
-    <script src="scripts/data.js"></script>
+    <script src="../scripts/data.js"></script>
     <!--Bootstrap js-->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
@@ -129,7 +55,7 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <!--My js code-->
-    <script src="scripts/customScript.js"></script>
+    <script src="../scripts/customScript.js"></script>
 </body>
 
 </html>
