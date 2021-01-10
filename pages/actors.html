@@ -9,37 +9,41 @@
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <!--Font awesome cdn-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <!--Custom CSS-->
     <link rel="stylesheet" href="../styles/custom.css">
     <title>Actor List</title>
 </head>
 
 <body>
-    <!--NavBar BS-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light m-2">
-        <!--Logo/Company name-->
-        <a class="navbar-brand" href="index.html">FigurActors</a>
-        <!--Hamburger Web Responsive menu-->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <!--Actual NavBar-->
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <!--Home page (active)-->
-                <li class="nav-item">
-                    <a class="nav-link" href="../index.html">Home</a>
-                </li>
-                <!--Availability Page-->
-                <li class="nav-item">
-                    <a class="nav-link" href="availability.html">Availability</a>
-                </li>
-                <!--Actors page-->
-                <li class="nav-item active">
-                    <a class="nav-link" href="actors.html">Actors <span class="sr-only">(current)</span></a>
-                </li>
-            </ul>
+    <!--Nav Bar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-2 text-light">
+        <div class="container-fluid">
+            <!--Logo/Company name-->
+            <a class="navbar-brand pl-3" href="../index.html">FigurActor</a>
+            <!--Hamburger Web Responsive menu-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!--Links-->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 pl-3">
+                    <!--Home page-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <!--Availability Page-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="availability.html">Availability</a>
+                    </li>
+                    <!--Actors page-->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="actors.html">Actors</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
     <main>
@@ -71,8 +75,8 @@
         <!--Actors-->
         <section class="bg-secondary w-100 py-5">
             <div class="container my-5">
-                <div class="row row-cols-1 row-cols-md-2 g-4" id="cards">
-                    <div class="card" id="mock">
+                <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center" id="cards">
+                    <div class="card mx-2 py-3" style="max-width: 540px;" id="mock">
                         <div class="row">
                             <div class="col-md-4">
                                 <img src="" alt="..." class="w-100">
