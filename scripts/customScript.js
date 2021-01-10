@@ -29,7 +29,8 @@ $('.btn').on('click', function (e) {
     $('.card').hide();
     //to pick a category based on cnst do this
     //turned to lower case because value are Capitalized (big dum dum)
-    $('.' + selectCategory.toLowerCase()).show();
+    const selectedCat = selectCategory.toLowerCase()
+    $('.' + selectedCat).show();
     //by applying same value
     $('#inputSelectCategory').val(selectCategory);
 });
@@ -67,9 +68,9 @@ $('form').on('submit', function (e) {
     //you get it from the select element, the option si the value
     //to check for email emailValue.split('@')[1]includes.('.');
     const actorName = $('#inputSelectActor').val(); // john-doe
-    $('form').html('Sorry, <span>' + $('#' + actorName).text() + '</span> is not currently available. You will be contacted as soon as possible.');
-    $(this).find('span').css('text-transform', 'capitalize');
-})
+    $('form').html('<p class="py-3 text-center">Sorry, <span>' + actorName + '</span> is not currently available. You will be contacted as soon as possible to make the necessary arrangemenets. Thank you for your patience.<p>');
+    $(this).find('span').css('text-transform', 'capitalize').addClass('text-primary');
+});
 
 //BONUS 1 - Form to Page
 
