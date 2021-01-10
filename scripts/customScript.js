@@ -11,7 +11,7 @@ for (const actor of actors) {
     newCard.find('img').attr('src', actor.picture);
     //adding class jquery
     newCard.addClass(actor.category);
-    newCard.attr('id', actor.name.split(' ').join('-'));
+    newCard.attr('id', actor.name.split(' ').join(' '));
     newCard.removeClass('d-none');
     //corecting capitalization
     newCard.find('.card-title').css('textTransform', 'capitalize');
@@ -65,7 +65,6 @@ $('input, select').attr('required', true);
 $('form').on('submit', function (e) {
     e.preventDefault();
     //you get it from the select element, the option si the value
-
     //to check for email emailValue.split('@')[1]includes.('.');
     const actorName = $('#inputSelectActor').val(); // john-doe
     $('form').html('Sorry, <span>' + $('#' + actorName).text() + '</span> is not currently available. You will be contacted as soon as possible.');
@@ -77,7 +76,7 @@ $('form').on('submit', function (e) {
 $('#inputSelectCategory').on('change', function (e) {
     //create a constant get the value from the selector
     const inputCategory = $(this).val();
-    console.log(inputCategory);
+    //console.log(inputCategory);
     $('.card').hide();
     //turned to lower case because value are Capitalized (big dum dum)
     $('.' + inputCategory.toLowerCase()).show();
@@ -90,8 +89,7 @@ $('#inputSelectCategory').on('change', function (e) {
 $('#inputSelectActor').on('change', function (e) {
     //get the actor's name from the text not value.
     const selectedActorNameInput = $(this).val();
-    console.log(selectedActorNameInput);
     $('.card').removeClass('bg-primary text-white');
     //adds it to all the clicked
-    $('#' + selectedActorNameInput).addClass('bg-primary text-white');
+    $('[id="' + selectedActorNameInput + '"]').addClass('bg-primary text-white');
 });
