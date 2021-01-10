@@ -94,3 +94,23 @@ $('#inputSelectActor').on('change', function (e) {
     //adds it to all the clicked
     $('[id="' + selectedActorNameInput + '"]').addClass('bg-primary text-white');
 });
+
+// Cloning of Actor's information
+const actorMock = $('#mock');
+for (const actor of actors) {
+    //cloning using jquery
+    const newCard = actorMock.clone();
+    //appending using jquery
+    newCard.appendTo($('#cards'));
+    //adding information jquery
+    newCard.find('.card-title').text(actor.name).css('textTransform', 'capitalize');
+    newCard.find('img').attr('src', actor.picture);
+    newCard.find('small').text(actor.category).css('textTransform', 'capitalize');
+    newCard.find('p').eq(0).text(actor.info);
+    //adding class jquery
+    newCard.addClass(actor.category);
+    newCard.attr('id', actor.name.split(' ').join(' '));
+    newCard.removeClass('d-none');
+}
+//killing mock
+$('#mock').remove();

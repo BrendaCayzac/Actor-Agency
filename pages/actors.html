@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Boostrap css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!--Font awesome cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="../styles/custom.css">
+    <title>Actor List</title>
+</head>
+
+<body>
+    <!--NavBar BS-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light m-2">
+        <!--Logo/Company name-->
+        <a class="navbar-brand" href="index.html">FigurActors</a>
+        <!--Hamburger Web Responsive menu-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--Actual NavBar-->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <!--Home page (active)-->
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <!--Availability Page-->
+                <li class="nav-item">
+                    <a class="nav-link" href="availability.html">Availability</a>
+                </li>
+                <!--Actors page-->
+                <li class="nav-item active">
+                    <a class="nav-link" href="actors.html">Actors <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <!--content-->
+        <!--Information-->
+        <section id="infoActors">
+            <div class="container-lg mt-5 py-3">
+                <h1 class="my-4 text-center text-secondary border-bottom border-3 pb-4">Our actors
+                </h1>
+                <div class="row row-cols-1 row-cols-md-2 g-4 my-4 py-2 text-justified text-break">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo numquam tempora laboriosam
+                        consequatur. Dolores deleniti illo nostrum nisi expedita iure vero molestias quisquam magni. Ex
+                        earum assumenda tenetur asperiores dicta? Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Vitae non cumque voluptatibus recusandae. Aliquam harum dicta omnis, ex quo quisquam atque
+                        animi quaerat illo aliquid enim eius repellendus expedita sint. Lorem ipsum dolor, sit amet
+                        consectetur adipisicing elit. Ipsum odit enim corrupti!</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat quisquam sapiente quas neque
+                        quae ut expedita consequuntur repellat doloremque adipisci voluptates odit dolore nobis dolor
+                        nam eum, cumque explicabo suscipit? Temporibus repudiandae totam exercitationem
+                        quisquam sit aliquam, tempora dolor minus ut esse. Veritatis fugit, repellat doloribus
+                        accusantium quo dolorum ab nesciunt eum! Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Minima possimus, incidunt labore veniam est sint accusamus dolorum numquam deserunt
+                        corporis, laborum, facere repellat cum adipisci illo molestiae aspernatur ratione voluptates!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!--Actors-->
+        <section class="bg-secondary w-100 py-5">
+            <div class="container my-5">
+                <div class="row row-cols-1 row-cols-md-2 g-4" id="cards">
+                    <div class="card" id="mock">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="" alt="..." class="w-100">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title text-primary">Title</h5>
+                                    <p class="card-text">Description</p>
+                                    <p class="card-text"></p><small class="text-muted">Category</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 d-flex flex-column justify-content-center align-items-center">
+        <p>All rights reserved 2021. Bootstrap showcase.</p>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item" aria-current="page"><a class="link-light" href="index.html">Home</a>
+                </li>
+                <li class="breadcrumb-item"><a class="link-light" href="pages/availability.html">Availability</a></li>
+                <li class="breadcrumb-item active"><a class=" text-decoration-none link-light"
+                        href="actors.html">Actors</a></li>
+            </ol>
+        </nav>
+    </footer>
+
+    <!--data js-->
+    <script src="../scripts/data.js"></script>
+    <!--Bootstrap js-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+        integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+        crossorigin="anonymous"></script>
+    <!--My js code-->
+    <script src="../scripts/customScript.js"></script>
+</body>
+
+</html>
